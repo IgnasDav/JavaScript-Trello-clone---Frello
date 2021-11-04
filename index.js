@@ -11,26 +11,29 @@ function createList() {
 
   listText.addEventListener("click", () => {
     //Creating and adding item
-    listText.classList.toggle("hidden");
+    listText.remove();
     const listClass = document.createElement("div");
     const listInput = document.createElement("input");
     const btnAdd = document.createElement("button");
     const btnDiv = document.createElement("div");
-    btnDiv.classList.add("main__list__btnDiv");
-    btnAdd.textContent = "Add List";
     const btnDelete = document.createElement("p");
+
+    btnAdd.classList.add("main__list__btnAdd");
+    btnDiv.classList.add("main__list__btnDiv");
+    btnDelete.classList.add("main__list__btnDlt");
+    btnAdd.textContent = "Add List";
     btnDelete.innerHTML = `<i class="fas fa-times"></i>`;
-    btnDiv.append(btnAdd, btnDelete);
-    listClass.append(listInput, btnDiv);
     listInput.classList.add("main__list__input");
-    list.append(listClass);
     listInput.innerHTML = `<input type="text">`;
     listInput.type = "text";
+    btnDiv.append(btnAdd, btnDelete);
+    listClass.append(listInput, btnDiv);
+    list.append(listClass);
 
     document.addEventListener("click", (e) => {
       if (e.target.className === "main") {
-        listText.classList.toggle("hidden");
-        listClass.classList.toggle("hidden");
+        list.append(listText);
+        listClass.remove();
       }
     });
   });

@@ -30,8 +30,8 @@ html {
     align-items: center;
     border-radius: 0.5rem;
     background-color: #959994bd;
-    min-height: 4rem;
-    max-height: 6rem;
+
+    max-height: 6.5rem;
 
     &__text {
       padding: 1rem;
@@ -42,10 +42,29 @@ html {
       cursor: pointer;
     }
     &__input {
-      width: 100%;
+      width: 21rem;
+      height: 2.5rem;
+    }
+    &__btnAdd {
+      height: 3rem;
+      width: 8rem;
+      background-color: #0076bb;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      color: white;
+    }
+    &__btnAdd:hover {
+      background-color: #0285d1;
+    }
+    &__btnDlt {
+      font-size: 2rem;
+      margin-left: 2rem;
     }
     &__btnDiv {
       display: flex;
+      align-items: center;
+      padding: 0.2rem;
     }
   }
 }
