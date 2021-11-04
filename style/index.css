@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.main {
+  padding: 4rem 2rem;
+  background: #678eee;
+  background: linear-gradient(241deg, #678eee 0%, #bf19ff 67%);
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.main__list:hover {
+  background-color: #b8bbb8bd;
+}
+
+.main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  background-color: #959994bd;
+  min-height: 4rem;
+  max-height: 6rem;
+}
+
+.main__list__text {
+  padding: 1rem;
+  width: 100%;
+  color: white;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.main__list__input {
+  width: 100%;
+}
+
+.main__list__btnDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */
