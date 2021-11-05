@@ -17,23 +17,55 @@ function createList() {
     const btnAdd = document.createElement("button");
     const btnDiv = document.createElement("div");
     const btnDelete = document.createElement("p");
-
+    listClass.classList.add("main__list__div");
     btnAdd.classList.add("main__list__btnAdd");
     btnDiv.classList.add("main__list__btnDiv");
     btnDelete.classList.add("main__list__btnDlt");
     btnAdd.textContent = "Add List";
     btnDelete.innerHTML = `<i class="fas fa-times"></i>`;
     listInput.classList.add("main__list__input");
-    listInput.innerHTML = `<input type="text">`;
     listInput.type = "text";
     btnDiv.append(btnAdd, btnDelete);
     listClass.append(listInput, btnDiv);
     list.append(listClass);
 
+    function removeInput() {
+      list.append(listText);
+      listClass.remove();
+    }
+
     document.addEventListener("click", (e) => {
       if (e.target.className === "main") {
-        list.append(listText);
-        listClass.remove();
+        removeInput();
+      }
+    });
+
+    btnDelete.addEventListener("click", () => {
+      removeInput();
+    });
+
+    btnAdd.addEventListener("click", () => {
+      if (listInput.value === "") {
+      } else {
+        const listName = document.createElement("div");
+        const listNameParagraph = document.createElement("p");
+        const listNameDots = document.createElement("div");
+        const addCard = document.createElement("div");
+
+        listNameDots.classList.add("main__list__input__card__dots");
+        listName.classList.add("main__list__input__card");
+        addCard.classList.add("main__list__input__card__add");
+
+        addCard.innerHTML = `<i class="fas fa-plus"></i> Add a card`;
+        listNameDots.textContent = "...";
+        listNameParagraph.textContent = listInput.value;
+
+        listInput.remove();
+        btnDiv.remove();
+        listName.append(listNameParagraph, listNameDots);
+        listClass.prepend(listName, addCard);
+
+        addCard.addEventListener("click", () => {});
       }
     });
   });

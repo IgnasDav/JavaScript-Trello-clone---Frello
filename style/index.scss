@@ -8,15 +8,20 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Red Hat Mono", monospace;
 }
-.main {
-  padding: 4rem 2rem;
+body {
   background: rgb(103, 142, 238);
   background: linear-gradient(
     241deg,
     rgba(103, 142, 238, 1) 0%,
     rgba(191, 25, 255, 1) 67%
   );
+  padding: 4rem 2rem;
+}
+.main {
+  background-color: rgba(189, 189, 189, 0.37);
+  padding: 1rem;
   min-height: 100vh;
   display: grid;
   gap: 2rem;
@@ -30,36 +35,80 @@ html {
     align-items: center;
     border-radius: 0.5rem;
     background-color: #959994bd;
-
-    max-height: 6.5rem;
-
-    &__text {
-      padding: 1rem;
+    max-height: 8rem;
+    &__div {
+      width: 29rem;
+      background-color: #ebecf0;
+      height: 100%;
       width: 100%;
+      border-radius: 0.5rem;
+      display: grid;
+      padding: 0.5rem;
+    }
+    &__text {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      width: 29rem;
+      height: 8rem;
       color: white;
       font-size: 1.6rem;
       letter-spacing: 0.1rem;
       cursor: pointer;
+      height: 100%;
     }
     &__input {
-      width: 21rem;
-      height: 2.5rem;
+      width: 28rem;
+      height: 3.6rem;
+
+      &__card {
+        width: 28rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+
+        &__add {
+          width: 26rem;
+          font-size: 1.5rem;
+          display: flex;
+          align-items: center;
+          border-radius: 0.5rem;
+          margin-left: 0.8rem;
+          margin-right: 1rem;
+        }
+        &__add:hover {
+          background-color: #cfd0d4;
+        }
+        &__dots {
+          font-size: 2.5rem;
+          position: absolute;
+          right: 80%;
+          top: 5%;
+        }
+      }
+      &__card p {
+        font-weight: 700;
+      }
     }
     &__btnAdd {
-      height: 3rem;
-      width: 8rem;
+      height: 3.2rem;
+      width: 7rem;
       background-color: #0076bb;
       border: none;
       border-radius: 0.5rem;
       padding: 0.5rem;
       color: white;
+      cursor: pointer;
     }
     &__btnAdd:hover {
       background-color: #0285d1;
     }
     &__btnDlt {
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-left: 2rem;
+      cursor: pointer;
     }
     &__btnDiv {
       display: flex;

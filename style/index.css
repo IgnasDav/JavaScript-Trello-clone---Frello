@@ -11,12 +11,18 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Red Hat Mono", monospace;
+}
+
+body {
+  background: #678eee;
+  background: linear-gradient(241deg, #678eee 0%, #bf19ff 67%);
+  padding: 4rem 2rem;
 }
 
 .main {
-  padding: 4rem 2rem;
-  background: #678eee;
-  background: linear-gradient(241deg, #678eee 0%, #bf19ff 67%);
+  background-color: rgba(189, 189, 189, 0.37);
+  padding: 1rem;
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -41,31 +47,95 @@ html {
           align-items: center;
   border-radius: 0.5rem;
   background-color: #959994bd;
-  max-height: 6.5rem;
+  max-height: 8rem;
+}
+
+.main__list__div {
+  width: 29rem;
+  background-color: #ebecf0;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  padding: 0.5rem;
 }
 
 .main__list__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem;
-  width: 100%;
+  width: 29rem;
+  height: 8rem;
   color: white;
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  height: 100%;
 }
 
 .main__list__input {
-  width: 21rem;
-  height: 2.5rem;
+  width: 28rem;
+  height: 3.6rem;
+}
+
+.main__list__input__card {
+  width: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.main__list__input__card__add {
+  width: 26rem;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.5rem;
+  margin-left: 0.8rem;
+  margin-right: 1rem;
+}
+
+.main__list__input__card__add:hover {
+  background-color: #cfd0d4;
+}
+
+.main__list__input__card__dots {
+  font-size: 2.5rem;
+  position: absolute;
+  right: 80%;
+  top: 5%;
+}
+
+.main__list__input__card p {
+  font-weight: 700;
 }
 
 .main__list__btnAdd {
-  height: 3rem;
-  width: 8rem;
+  height: 3.2rem;
+  width: 7rem;
   background-color: #0076bb;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;
   color: white;
+  cursor: pointer;
 }
 
 .main__list__btnAdd:hover {
@@ -73,8 +143,9 @@ html {
 }
 
 .main__list__btnDlt {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 .main__list__btnDiv {
